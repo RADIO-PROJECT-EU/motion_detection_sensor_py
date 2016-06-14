@@ -1,0 +1,2 @@
+api_url: 'http://localhost:8080/radioMC/radio/getSensorStatus'
+publish_topic: 'status'
