@@ -2,7 +2,7 @@
 <launch>
 	<master auto="start"/>
 
-	<node pkg="motion_detection_sensor_status_publisher" type="sensor_status.py" respawn="false" name="motionj_analysis_sensor_status_publisher" output="screen">
+	<node pkg="motion_detection_sensor_status_publisher" type="sensor_status.py" respawn="false" name="motion_detection_sensor_status_publisher" output="screen">
 		<rosparam file="$(find motion_detection_sensor_status_publisher)/config/parameters.yaml" command="load" />
 	</node>
 </launch>
