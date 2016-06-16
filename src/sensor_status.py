@@ -11,7 +11,7 @@ def init():
     global url, publisher, topic
     rospy.init_node('motion_detection_sensor_status_publisher')
     url = rospy.get_param('~api_url', 'http://localhost:8080/radioMC/radio/getSensorStatus')
-    topic = '~'+rospy.get_param('~publish_topic', '~status')
+    topic = '~'+rospy.get_param('~publish_topic', 'status')
     publisher = rospy.Publisher(topic, SensorStatusMsg, queue_size=10)
     rospy.Timer(rospy.Duration(0.5), requestAndPublish)
     while not rospy.is_shutdown():  
